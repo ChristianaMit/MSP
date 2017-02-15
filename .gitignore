@@ -1,8 +1,0 @@
-.DS_Store
-.vscode/
-bin/
-obj/
-project.json
-project.lock.json
-
-
