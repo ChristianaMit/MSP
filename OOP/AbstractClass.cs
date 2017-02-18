@@ -13,8 +13,7 @@ public abstract class Book{
 
 public class MyBook: Book{
     public override void setTitle(string s){
-    	string title= null;
-		title = s;    
+    	string title= s;    
     }    
 }
 
