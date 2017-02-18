@@ -20,8 +20,7 @@ public class MyBook: Book{
 
 class PrintTitle{	
 	static void Main(String[] args) {		
-		//string title=Console.ReadLine();
-		string title = "This is it";
+		string title=Console.ReadLine();
 		MyBook new_novel=new MyBook();
 		new_novel.setTitle(title);
 		Console.WriteLine("The title is: {0} ", new_novel.getTitle());		
