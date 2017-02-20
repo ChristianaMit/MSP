@@ -5,14 +5,12 @@ namespace Inheritance{
     public class Calculate{
     
     int get_int_val(){
-        int sc=new Scanner(System.in);
-		int x=sc.nextLine();
+        int x=Convert.ToInt32(Console.ReadLine());
         return x;
     }
     
     double get_double_val(){
-        Scanner sc=new Scanner(System.in);
-		double x=sc.nextLine();
+		double x=Convert.ToDouble(Console.ReadLine());
         return x;
     }
     public void getData{
