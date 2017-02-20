@@ -5,7 +5,7 @@ namespace Inheritance{
     public class Calculate{
     
     int get_int_val(){
-        Scanner sc=new Scanner(System.in);
+        int sc=new Scanner(System.in);
 		int x=sc.nextLine();
         return x;
     }
@@ -15,6 +15,10 @@ namespace Inheritance{
 		double x=sc.nextLine();
         return x;
     }
+    public void getData{
+        ;
+    }
+    
     
     float get_volume(int a){
         DecimalFormat df = new DecimalFormat("#.####");
