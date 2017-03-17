@@ -6,10 +6,9 @@ namespace TerminalSimulator
 {
     public class Touch: IExecuter
     {
-        public void Execute(string input, Directory curDir, FileSystemReader file)
+        public void Execute(string input, FileSystemReader file)
         {
             Console.WriteLine("{0}",input);
         }
-        
     }
 }

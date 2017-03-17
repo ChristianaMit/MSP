@@ -14,11 +14,9 @@ namespace TerminalSimulator
 
             string name= "Kitty";
             FileSystemReader allDirectories = new FileSystemReader();
-            Directory currentDirectory = allDirectories.AllDirectories[0];
 
             Reader read = new Reader();
-            read.InputReader(name, currentDirectory, allDirectories);
-
+            read.InputReader(name, allDirectories);
         }
     }
 }

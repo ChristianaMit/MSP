@@ -5,12 +5,14 @@ namespace TerminalSimulator
 {
     public class FileSystemReader: Entity
     {         
+            public Directory curentDirectory = new Directory();
             public List<Directory>  AllDirectories = new List<Directory>(10);
             public List<File> AllFiles = new List<File>(10);
 
             //Due to some tehnical dificutlies, this part will be hard-codded for test purposes
             public FileSystemReader(){
                 
+
                 for(int i = 0 ; i < 10 ;i++){
                     AllDirectories.Add(new Directory());
                     AllFiles.Add(new File());
@@ -20,6 +22,8 @@ namespace TerminalSimulator
                AllDirectories[0].name = "/";
                this.AllDirectories[0].parent = null;
                this.AllDirectories[0].AddChild ( this.AllDirectories[1]);
+
+               curentDirectory = AllDirectories[0];
                
                this.AllDirectories[1].name = "Home";
                this.AllDirectories[1].parent = this.AllDirectories[0];
