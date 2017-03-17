@@ -7,21 +7,21 @@ namespace TerminalSimulator
         
         public void InputReader(string name, Directory curDir){
             
-            Console.Write("\n{0}: {1} {0}$ ", name,curDir.Name);
+            Console.Write("\n{0}: {1} {0}$ ", name,curDir.name);
             string input = Console.ReadLine();
             string end = "exit";
             
             while( input != end){
                 
                 while( input.Equals("\n")){
-                    Console.Write("\n{0}: {1} {0}$ ", name,curDir.Name);
+                    Console.Write("\n{0}: {1} {0}$ ", name,curDir.name);
                     input = Console.ReadLine();
                 }
                 
                 CommandSearcher searcher = new CommandSearcher();
                 searcher.CmdSearch(name, input, curDir);
                 
-                Console.Write("\n{0}: {1} {0}$ ", name,curDir.Name);
+                Console.Write("\n{0}: {1} {0}$ ", name,curDir.name);
                 input = Console.ReadLine();
  
             }

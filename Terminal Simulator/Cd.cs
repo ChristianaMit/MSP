@@ -9,7 +9,7 @@ namespace TerminalSimulator
         public void Execute(string inputDir, Directory currentDir)
         {
 
-            foreach(var child in currentDir.Children)
+            foreach(var child in currentDir.children)
             {
                 
 

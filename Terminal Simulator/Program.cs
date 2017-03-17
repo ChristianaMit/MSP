@@ -13,8 +13,9 @@ namespace TerminalSimulator
             string pass= Console.ReadLine();
             Console.WriteLine("\n   Welcome back {0}!\n", name);
             
-            Directory currentDirectory = new Directory();
-            
+            FileSystemReader allDirectories = new FileSystemReader();
+            Directory currentDirectory = allDirectories.AllDirectories[0];
+
             Reader read = new Reader();
             read.InputReader(name, currentDirectory);
 

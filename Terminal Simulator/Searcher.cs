@@ -11,7 +11,6 @@ namespace TerminalSimulator
             
             int verifier=0;
 
-
             string inputCommand = input;
             string parameter = input;
 
