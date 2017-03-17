@@ -41,15 +41,15 @@ namespace TerminalSimulator
                this.AllDirectories[4].AddChild ( this.AllFiles[1]);
                this.AllDirectories[4].AddChild ( this.AllFiles[2]);
 
-               this.AllFiles[0].fileName = "Lena.jpg";
+               this.AllFiles[0].name = "Lena.jpg";
                this.AllFiles[0].content = "http://tech.velmont.net/files/2009/04/len_full.jpg";
                this.AllFiles[0].parent = this.AllDirectories[3];
 
-               this.AllFiles[1].fileName = "CV.pdf";
+               this.AllFiles[1].name = "CV.pdf";
                this.AllFiles[1].content = "Sarac. Pls give job.";
                this.AllFiles[1].parent = this.AllDirectories[4];
 
-               this.AllFiles[2].fileName = "ShoppingList.pdf";
+               this.AllFiles[2].name = "ShoppingList.pdf";
                this.AllFiles[2].content = "Săpun";
                this.AllFiles[2].parent = this.AllDirectories[4];
 
@@ -66,11 +66,11 @@ namespace TerminalSimulator
                this.AllDirectories[7].parent = this.AllDirectories[5];
                this.AllDirectories[7].AddChild ( this.AllFiles[4]);
                
-               this.AllFiles[3].fileName = "HelloWorld.cs";
+               this.AllFiles[3].name = "HelloWorld.cs";
                this.AllFiles[3].content = "public class HelloWorld\n{public static void Main(){\nSystem.Console.WriteLine(Hello, World!);\n}\n}\n";
                this.AllFiles[3].parent = this.AllDirectories[6];
 
-               this.AllFiles[4].fileName = "Livin' On A Prayer.mp3";
+               this.AllFiles[4].name = "Livin' On A Prayer.mp3";
                this.AllFiles[4].content ="Whoa, we're half way there \nWhoa, livin' on a prayer \nTake my hand and we'll make it - I swear \nWhoa, livin' on a prayer";
                this.AllFiles[4].parent = this.AllDirectories[7];
             }

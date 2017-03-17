@@ -21,6 +21,9 @@ namespace TerminalSimulator
                 parameter = parameter.TrimStart(' ');
                 parameter = parameter.TrimStart('"');
             }
+            else{
+                parameter = null;
+            }
 
             for(int i = 0; i < commands.Length; i++ ){
                     if( inputCommand.Equals(commands[i])){

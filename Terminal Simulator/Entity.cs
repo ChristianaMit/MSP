@@ -6,6 +6,6 @@ namespace TerminalSimulator
 {
     public abstract class Entity
     {
-
+        public string name;
     }
 }

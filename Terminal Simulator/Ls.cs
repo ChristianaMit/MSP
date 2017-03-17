@@ -10,9 +10,12 @@ namespace TerminalSimulator
         {
             if(input != null)
                 Console.Write("Error: command doesn't accept parameters");
-            else
-                Console.WriteLine(curDir.children);
+            
+            else{
+                for(int i=0; i<curDir.children.Count; i++){
+                    Console.WriteLine("{0}\n",curDir.children[i].name);
+                }
+            }
         }
-        
     }
 }

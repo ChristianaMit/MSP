@@ -5,7 +5,6 @@ namespace TerminalSimulator{
 
     public class Directory: Entity{
         public List<Entity> children = new List<Entity>(); 
-        public String name;
         public Entity parent;
         public void AddChild( Entity child ){
             children.Add(child);

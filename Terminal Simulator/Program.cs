@@ -6,12 +6,13 @@ namespace TerminalSimulator
     {  
         public static void Main(string[] args)
         {
-            Console.Write("Username:");
+            /*Console.Write("Username:");
             string name= Console.ReadLine();
             Console.Write("Password:");
             string pass= Console.ReadLine();
-            Console.WriteLine("\n   Welcome back {0}!\n", name);
-            
+            Console.WriteLine("\n   Welcome back {0}!\n", name);*/
+
+            string name= "Kitty";
             FileSystemReader allDirectories = new FileSystemReader();
             Directory currentDirectory = allDirectories.AllDirectories[0];
 
