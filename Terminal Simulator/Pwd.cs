@@ -4,12 +4,12 @@ using System.Text;
 
 namespace TerminalSimulator
 {
-    public class Echo: IExecuter
+    public class Pwd: IExecuter
     {
         public void Execute(string input, Directory curDir)
         {
             Console.WriteLine("{0}",input);
         }
-        
+
     }
 }

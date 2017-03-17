@@ -11,8 +11,5 @@ namespace TerminalSimulator
             //foreach(string inputDir in Children.currentDir)
         }
 
-        public void Execute(){}
-        public void Execute(string s){}
-
     }
 }

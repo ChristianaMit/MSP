@@ -4,8 +4,11 @@ namespace TerminalSimulator
 {
     public class CommandSearcher
     {
+        
         public static string [] commands = new string [] {"echo", "cd", "ls", "touch", "mkdir", "tree", "pwd", "rm", "rmdir"};
+        
         public void CmdSearch(string name, string input, Directory curDir){
+            
             int verifier=0;
             Console.WriteLine("A ajuns aici");
 
@@ -14,52 +17,51 @@ namespace TerminalSimulator
             Console.WriteLine(parameters);
 
                 for(int i = 0; i < commands.Length; i++ ){
-                    string searchCommand = commands[i];
-                    if( inputCommand.Equals(searchCommand)){
+                    if( inputCommand.Equals(commands[i])){
+                        
                         Console.Write("\nInput command was: {0}\n", inputCommand);
                         verifier=1;
 
-                        string caseSw = searchCommand;
+                        string caseSw = commands[i];
                         switch (caseSw){
                                 
                             case "pwd":
                                 break;
                                 
-                                case "ls":
+                            case "ls":
 
-                                    break;
+                                break;
                                 
-                                case "mkdir":
+                            case "mkdir":
 
-                                    break;
+                                break;
                                 
-                                case "touch":
+                            case "touch":
 
-                                    break;
+                                break;
                                 
-                                case "cd":
-                                    Cd newDir = new Cd();
-                                    newDir.Execute(parameters);
-                                    break;
-                                
-                                case "rmdir":
+                            case "cd":
+                                Cd newDir = new Cd();
+                                newDir.Execute(parameters, curDir);
+                                break;
+                            
+                            case "rmdir":
                                         
-                                    break;
+                                break;
                                 
-                                case "rm":
-                                    break;
+                            case "rm":
+                                break;
                                 
-                                case "tree":
-
-                                    break;
+                            case "tree":
+                                break;
                                 
-                                case "echo":
-                                    Echo text = new Echo();
-                                    text.Execute(parameters);
-                                    break;
-                                } 
-                            }
-                    }
+                            case "echo":
+                                Echo text = new Echo();
+                                text.Execute(parameters, curDir);
+                                break;
+                            } 
+                        }
+                }
 
                 if(verifier == 0){
                     Console.Write("Command not found");

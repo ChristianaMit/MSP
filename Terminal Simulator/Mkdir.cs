@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TerminalSimulator
 {
-    public class Echo: IExecuter
+    public class Mkdir: IExecuter
     {
         public void Execute(string input, Directory curDir)
         {
