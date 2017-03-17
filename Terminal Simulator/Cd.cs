@@ -8,7 +8,12 @@ namespace TerminalSimulator
     {
         public void Execute(string inputDir, Directory currentDir)
         {
-            //foreach(string inputDir in Children.currentDir)
+
+            foreach(var child in currentDir.Children)
+            {
+                
+
+            }
         }
 
     }

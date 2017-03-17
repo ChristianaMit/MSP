@@ -19,7 +19,7 @@ namespace TerminalSimulator
                 }
                 
                 CommandSearcher searcher = new CommandSearcher();
-                searcher.CmdSearch(input, name, curDir);
+                searcher.CmdSearch(name, input, curDir);
                 
                 Console.Write("\n{0}: {1} {0}$ ", name,curDir.Name);
                 input = Console.ReadLine();

@@ -10,16 +10,19 @@ namespace TerminalSimulator
         public void CmdSearch(string name, string input, Directory curDir){
             
             int verifier=0;
-            Console.WriteLine("A ajuns aici");
 
-            string inputCommand = input.Substring(0, input.IndexOf(" "));
-            string parameter = input.Trim().Trim('"');
-            Console.WriteLine(parameter);
 
-                for(int i = 0; i < commands.Length; i++ ){
+            string inputCommand = input;
+            string parameter = input;
+
+            if(input.Contains(" ")){
+                inputCommand = input.Substring(0, input.IndexOf(" "));
+                parameter = input.Trim().Trim('"');
+                Console.WriteLine(parameter);
+            }
+
+            for(int i = 0; i < commands.Length; i++ ){
                     if( inputCommand.Equals(commands[i])){
-                        
-                        Console.Write("\nInput command was: {0}\n", inputCommand);
                         verifier=1;
 
                         string caseSw = commands[i];
@@ -67,7 +70,7 @@ namespace TerminalSimulator
                                 
                             case "echo":
                                 Echo text = new Echo();
-                                text.Execute(parameters, curDir);
+                                text.Execute(parameter, curDir);
                                 break;
                             } 
                         }
