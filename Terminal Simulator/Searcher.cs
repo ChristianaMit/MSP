@@ -13,8 +13,8 @@ namespace TerminalSimulator
             Console.WriteLine("A ajuns aici");
 
             string inputCommand = input.Substring(0, input.IndexOf(" "));
-            string parameters = input.TrimStart('"');
-            Console.WriteLine(parameters);
+            string parameter = input.Trim().Trim('"');
+            Console.WriteLine(parameter);
 
                 for(int i = 0; i < commands.Length; i++ ){
                     if( inputCommand.Equals(commands[i])){
@@ -26,33 +26,43 @@ namespace TerminalSimulator
                         switch (caseSw){
                                 
                             case "pwd":
+                                Pwd showPath = new Pwd();
+                                showPath.Execute(parameter, curDir);
                                 break;
                                 
                             case "ls":
-
+                                Ls showContent = new Ls();
+                                showContent.Execute(parameter, curDir);
                                 break;
                                 
                             case "mkdir":
-
+                                Mkdir addDirectory = new Mkdir();
+                                addDirectory.Execute(parameter, curDir);
                                 break;
                                 
                             case "touch":
-
+                                Touch addFile = new Touch();
+                                addFile.Execute(parameter, curDir);
                                 break;
                                 
                             case "cd":
                                 Cd newDir = new Cd();
-                                newDir.Execute(parameters, curDir);
+                                newDir.Execute(parameter, curDir);
                                 break;
                             
                             case "rmdir":
-                                        
+                                Rmdir removeDir = new Rmdir();
+                                removeDir.Execute(parameter, curDir);     
                                 break;
                                 
                             case "rm":
+                                Rm removeFile = new Rm();
+                                removeFile.Execute(parameter, curDir);  
                                 break;
                                 
                             case "tree":
+                                Tree showTree = new Tree();
+                                showTree.Execute(parameter, curDir);  
                                 break;
                                 
                             case "echo":
@@ -65,8 +75,6 @@ namespace TerminalSimulator
 
                 if(verifier == 0){
                     Console.Write("Command not found");
-                    Console.Write("\n{0}: {1} {0}$ ", name, curDir.Name);
-                    input = Console.ReadLine();
                 }
 
         }
