@@ -17,7 +17,7 @@ namespace TerminalSimulator
 
             if(input.Contains(" ")){
                 inputCommand = input.Substring(0, input.IndexOf(" "));
-                parameter = input.Trim().Trim('"');
+                parameter = input.Remove(0, inputCommand.Length).Trim('"');
                 Console.WriteLine(parameter);
             }
 
