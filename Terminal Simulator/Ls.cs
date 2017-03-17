@@ -6,9 +6,12 @@ namespace TerminalSimulator
 {
     public class Ls: IExecuter
     {
-        public void Execute(string input, Directory curDir)
+        public void Execute(string input, Directory curDir, FileSystemReader file)
         {
-            Console.WriteLine("{0}",input);
+            if(input != null)
+                Console.Write("Error: command doesn't accept parameters");
+            else
+                Console.WriteLine(curDir.children);
         }
         
     }

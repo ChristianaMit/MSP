@@ -3,8 +3,7 @@
 namespace TerminalSimulator
 {
     public class Program 
-    {
-        
+    {  
         public static void Main(string[] args)
         {
             Console.Write("Username:");
@@ -17,7 +16,7 @@ namespace TerminalSimulator
             Directory currentDirectory = allDirectories.AllDirectories[0];
 
             Reader read = new Reader();
-            read.InputReader(name, currentDirectory);
+            read.InputReader(name, currentDirectory, allDirectories);
 
         }
     }

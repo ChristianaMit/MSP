@@ -6,7 +6,7 @@ namespace TerminalSimulator
 {
     public class Echo: IExecuter
     {
-        public void Execute(string input, Directory curDir)
+        public void Execute(string input, Directory curDir, FileSystemReader file)
         {
             Console.WriteLine("{0}",input);
         }

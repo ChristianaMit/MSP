@@ -5,6 +5,6 @@ using System.Text;
 namespace TerminalSimulator
 {
     public interface IExecuter{
-        void Execute(string command, Directory dir);
+        void Execute(string command, Directory dir, FileSystemReader file);
     }
 }
