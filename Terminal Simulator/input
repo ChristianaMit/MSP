@@ -1,6 +1,0 @@
- //The input file contains the name of ~ on the first line, 
-            //followed by a string of the names of the directory and files it contains.
-            //The next line is one of the children's name, 
-            //followed by type - file or directory,
-            //followed by content or children, as appropriate
-            //if it's a directory next line will be 
