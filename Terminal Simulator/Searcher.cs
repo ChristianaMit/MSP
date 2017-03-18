@@ -81,7 +81,7 @@ namespace TerminalSimulator
                 }
 
                 if(verifier == 0){
-                    Console.Write("Command not found");
+                    Console.Write("Command not found\n");
                 }
 
                 return file.curentDirectory;

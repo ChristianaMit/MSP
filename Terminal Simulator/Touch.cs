@@ -8,7 +8,7 @@ namespace TerminalSimulator
     {
         public void Execute(string input, FileSystemReader file)
         {
-            Console.WriteLine("{0}",input);
+            file.AddFile(input, "\n", file);
         }
     }
 }

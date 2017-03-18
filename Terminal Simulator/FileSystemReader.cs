@@ -9,15 +9,21 @@ namespace TerminalSimulator
             public List<Directory>  AllDirectories = new List<Directory>(10);
             public List<File> AllFiles = new List<File>(10);
 
+            public int numberOfDirectories = new int();
+            public int numberOfFiles = new int();
+
+           // System.IO.StreamReader file =  new System.IO.StreamReader(".input");
             //Due to some tehnical dificutlies, this part will be hard-codded for test purposes
             public FileSystemReader(){
-                
+                numberOfDirectories = 8;
+                numberOfFiles = 5;
 
-                for(int i = 0 ; i < 10 ;i++){
+                for(int i = 0 ; i < numberOfDirectories ;i++){
                     AllDirectories.Add(new Directory());
+                }
+                 for(int i = 0 ; i < numberOfFiles ;i++){
                     AllFiles.Add(new File());
                 }
-               // System.IO.StreamReader file =  new System.IO.StreamReader(".input");
                
                AllDirectories[0].name = "/";
                this.AllDirectories[0].parent = null;
@@ -78,6 +84,19 @@ namespace TerminalSimulator
                this.AllFiles[4].content ="Whoa, we're half way there \nWhoa, livin' on a prayer \nTake my hand and we'll make it - I swear \nWhoa, livin' on a prayer";
                this.AllFiles[4].parent = this.AllDirectories[7];
             }
+
+            public void AddFile(string name, string content, FileSystemReader file){
+                file.numberOfFiles = file.numberOfFiles+1;
+                int i = file.numberOfFiles-1;
+                
+                AllFiles.Add(new File());
+                file.AllFiles[i].name = name;
+                file.AllFiles[i].parent = file.curentDirectory;
+                file.AllFiles[i].content = content;
+                file.curentDirectory.AddChild(file.AllFiles[i]);
+            }
+
+
     }
 }
       
