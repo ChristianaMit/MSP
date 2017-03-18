@@ -37,15 +37,5 @@ namespace TerminalSimulator
                 Console.WriteLine("There is no such file.");
 
         }
-
-        public void RecursiveSearch(string name,Directory curentDirectory, FileSystemReader file){
-            file.curentDirectory=curentDirectory;
-            if(curentDirectory.children != null){
-                foreach(var child in curentDirectory.children){
-                    RecursiveSearch(name, child, file);
-                }
-            }
-
-        }
     }
 }

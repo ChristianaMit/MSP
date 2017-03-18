@@ -25,7 +25,6 @@ namespace TerminalSimulator
                     string absolutPath = "/" + temporaryDirectory.name;
                     
                     while( temporaryDirectory != file.AllDirectories[0] ){
-                        Console.WriteLine(absolutPath);
                         temporaryDirectory = temporaryDirectory.parent;
                         if(temporaryDirectory != file.AllDirectories[0])
                             absolutPath = "/" + temporaryDirectory.name + absolutPath;
