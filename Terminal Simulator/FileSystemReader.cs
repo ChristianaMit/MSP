@@ -63,7 +63,6 @@ namespace TerminalSimulator
                this.AllFiles[2].content = "Săpun";
                this.AllFiles[2].parent = this.AllDirectories[4];
 
-
                this.AllDirectories[5].name = "Music";
                this.AllDirectories[5].parent = this.AllDirectories[2];
                this.AllDirectories[5].AddChild ( this.AllDirectories[7]);
@@ -86,14 +85,25 @@ namespace TerminalSimulator
             }
 
             public void AddFile(string name, string content, FileSystemReader file){
-                file.numberOfFiles = file.numberOfFiles+1;
-                int i = file.numberOfFiles-1;
+                file.numberOfFiles = file.numberOfFiles + 1;
+                int i = file.numberOfFiles - 1;
                 
                 AllFiles.Add(new File());
                 file.AllFiles[i].name = name;
                 file.AllFiles[i].parent = file.curentDirectory;
                 file.AllFiles[i].content = content;
                 file.curentDirectory.AddChild(file.AllFiles[i]);
+            }
+
+            public void AddDirectory(string name, FileSystemReader file){
+                file.numberOfDirectories = file.numberOfDirectories + 1;
+                int i = file.numberOfDirectories - 1;
+
+                AllDirectories.Add(new Directory());
+                file.AllDirectories[i].name = name;
+                file.AllDirectories[i].parent = file.curentDirectory;
+                file.AllDirectories[i].children = null;
+                file.curentDirectory.AddChild(file.AllDirectories[i]);
             }
 
 
