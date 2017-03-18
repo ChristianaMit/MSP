@@ -10,8 +10,13 @@ namespace TerminalSimulator
         {
             int verifier = 0;
             string goingBack = "..";
-
-            if(inputDir.Equals(goingBack)){
+            
+            if(inputDir == null){
+                Console.WriteLine("Empty path is not valid!");
+                verifier = 3;
+            }
+            
+            else if(inputDir.Equals(goingBack)){
                 if(file.curentDirectory != file.AllDirectories[0])
                     file.curentDirectory = file.curentDirectory.parent;
                 verifier = 1;
@@ -31,7 +36,7 @@ namespace TerminalSimulator
             }
 
             if(verifier == 0){
-                Console.WriteLine("Invalide path!");
+                Console.WriteLine("Invalid path!");
             }
         }
 
