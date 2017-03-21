@@ -8,7 +8,21 @@ namespace TerminalSimulator
     {
         public void Execute(string input, FileSystemReader file)
         {
-            file.AddDirectory(input, file);
+            int verifier = 0;
+            if( input == null)
+                Console.WriteLine("Invalid directory name.");
+            
+            else{
+                if(file.curentDirectory.children != null)
+                    foreach(var child in file.curentDirectory.children)
+                        if(input.Equals(child.name)){
+                            Console.WriteLine("File already exists!");
+                            verifier = 1;
+                            break;
+                        }
+                if(verifier == 0)
+                    file.AddDirectory(input, file);
+            }                
         }
     }
 }

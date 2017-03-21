@@ -27,7 +27,7 @@ namespace TerminalSimulator
                                 index = i;
                         file.AllFiles.RemoveAt(index);
 
-                        file.numberOfFiles = file.numberOfFiles --;
+                        file.numberOfFiles = file.numberOfFiles -1;
                         break;
 
                     }

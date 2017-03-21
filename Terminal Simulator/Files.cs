@@ -6,6 +6,5 @@ namespace TerminalSimulator{
 
     public class File: Entity {
         public string content;
-        public Directory parent;
     }
 }

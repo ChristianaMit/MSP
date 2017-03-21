@@ -9,7 +9,7 @@ namespace TerminalSimulator
         public void Execute(string input, FileSystemReader file)
         {
             if(input != null)
-                Console.Write("Error: command doesn't accept parameters");
+                Console.Write("Error: command doesn't accept parameters.\n");
             
             else{
                 for(int i=0; i<file.curentDirectory.children.Count; i++){

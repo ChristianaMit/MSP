@@ -88,10 +88,11 @@
 --reference:/Users/Christiana/.nuget/packages/System.Xml.ReaderWriter/4.0.11/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/Christiana/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll
 /Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/Directory.cs
-/Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/DirectoryFinder.cs
+/Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/DirectorySetter.cs
 /Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/Entity.cs
 /Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/Files.cs
 /Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/FileSystemReader.cs
+/Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/OutputWriter.cs
 /Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/Program.cs
 /Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/Reader.cs
 /Users/Christiana/Desktop/MSP/GitHub/MSP/Terminal Simulator/Searcher.cs
